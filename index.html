@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="author" content="Christopher Lewis"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=yes">
+
+  <base href="index.html" target="_blank"/>
+
+  <link href="https://fonts.googleapis.com/css?family=Railway" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="scripts.js"></script>
+
+  <title>Wordbot Challenge</title>
+</head>
+
+<body onload="main()" onkeydown="listener(event)">
+  <h1 id="options" onclick="optionsClick(event)">&#9776;</h1>
+  <h1>Wordbot Challenge</h1>
+  <p>Using the <a href="https://github.com/noops-challenge/wordbot">wordbot</a> API,
+    this page generates a random word; lets play hangman.</p>
+  <p id="currentCategory"></p>
+
+  <!-- The Word -->
+  <section id="wordContainer">
+  </section>
+
+  <!-- Loss counter -->
+  <section id="lives">
+  </section>
+
+  <!-- Guessed Letters -->
+  <h3 id="guesses"></h3>
+
+  <!-- Options menu -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>Settings</h1>
+      <p>Filter Words:</p>
+      <select value="all">
+        <option value="all">All</option>
+        <option value="adjectives">Adjectives</option>
+        <option value="adverbs">Adverbs</option>
+        <option value="animals">Animals</option>
+        <option value="common">Common</option>
+        <option value="compounds">Compounds</option>
+        <option value="cats">Cats</option>
+        <option value="dinosaurs">Dinosaurs</option>
+        <option value="dogs">Dogs</option>
+        <option value="encouragement">Encouragement</option>
+        <option value="fabrics">Fabrics</option>
+        <option value="flowers">Flowers</option>
+        <option value="fruits">Fruits</option>
+        <option value="gemstones">Gemstones</option>
+        <option value="genres">Genres</option>
+        <option value="horses">Horses</option>
+        <option value="instruments">Instruments</option>
+        <option value="knots">Knots</option>
+        <option value="menu">Menu</option>
+        <option value="moods">Moods</option>
+        <option value="metals">Metals</option>
+        <option value="nouns">Nouns</option>
+        <option value="objects">Objects</option>
+        <option value="occupations">Occupations</option>
+        <option value="prepositions">Prepositions</option>
+        <option value="rhymeless">Rhymeless</option>
+        <option value="sports">Sports</option>
+        <option value="vegetables">Vegetables</option>
+        <option value="verbs">Verbs</option>
+        <option value="verbs_past">Verbs_past</option>
+        <option value="weather">Weather</option>
+        <option value="wrestlers">Wrestlers</option>
+      </select>
+      <button type="button" name="button" id="apply">Apply</button>
+    </div>
+  </div>
+
+</body>
